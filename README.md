@@ -241,7 +241,6 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 <!-- SECTION: Header / navigation -->
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" target="_self" href="#top">Leo Zheng<span>.</span></a>
     <nav class="nav" aria-label="Main">
       <a target="_self" href="#about">About</a>
       <a target="_self" href="#goals">Goals</a>

@@ -84,7 +84,7 @@ ul { margin: 0; padding: 0; }
 .btn:hover { transform: translateY(-1px); }
 
 .hero-card { display: grid; border: 1.5px solid var(--ink); background: var(--bg); min-width: 0; }
-.hero-card .photo { border: 0; border-bottom: 1.5px solid var(--ink); border-radius: 0; aspect-ratio: 4 / 3; }
+.hero-card .photo { border: 0; border-radius: 0; aspect-ratio: 4 / 3; }
 
 /* Title block, styled after an engineering drawing */
 .title-block { display: grid; grid-template-columns: 1fr 1fr; font-family: var(--mono); font-size: 0.82rem; margin: 0; }

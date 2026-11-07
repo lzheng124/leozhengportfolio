@@ -1,11 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
+---
+layout: null
+---
+<div id="portfolio">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- external links open in a new tab via target attributes -->
 <title>Leo Zheng Portfolio</title>
-<meta name="description" content="Portfolio of Leo Zheng, mechanical engineering student at Washington University in St. Louis.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -24,11 +22,9 @@
   --grid: rgba(95, 179, 230, 0.10);
   --photo-bg: #f4f9fd;
   --btn-ink: #ffffff;
-
   --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --body: "IBM Plex Sans", "Segoe UI", Roboto, Arial, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-
   --step-0: 1rem;
   --step-1: 1.25rem;
   --step-2: 1.6rem;
@@ -37,7 +33,6 @@
   --maxw: 1120px;
 }
 /* Single light theme: the page stays white for every viewer, including dark-mode systems. */
-
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
@@ -54,7 +49,6 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--sky-strong); ou
 h1, h2, h3 { font-family: var(--display); text-wrap: balance; line-height: 1.1; margin: 0; }
 p { margin: 0; }
 ul { margin: 0; padding: 0; }
-
 .wrap {
   max-width: var(--maxw);
   margin-inline: auto;
@@ -63,7 +57,6 @@ ul { margin: 0; padding: 0; }
 }
 .skip { position: absolute; left: -9999px; }
 .skip:focus { left: 16px; top: 16px; z-index: 50; background: var(--ink); color: var(--bg); padding: 8px 14px; }
-
 /* ---------- Header ---------- */
 .site-header {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
@@ -77,7 +70,6 @@ ul { margin: 0; padding: 0; }
 .nav { display: flex; gap: 4px; overflow-x: auto; min-width: 0; scrollbar-width: none; }
 .nav a { color: var(--ink); text-decoration: none; font-size: 0.9rem; font-weight: 500; padding: 6px 10px; border-radius: 6px; white-space: nowrap; }
 .nav a:hover { background: var(--surface); }
-
 /* ---------- Hero ---------- */
 .hero {
   background-color: var(--bg);
@@ -94,10 +86,8 @@ ul { margin: 0; padding: 0; }
 .btn.primary { background: var(--ink); color: var(--btn-ink); }
 .btn.secondary { background: transparent; color: var(--ink); }
 .btn:hover { transform: translateY(-1px); }
-
 .hero-card { display: grid; border: 1.5px solid var(--ink); background: var(--bg); min-width: 0; }
 .hero-card .photo { border: 0; border-bottom: 1.5px solid var(--ink); border-radius: 0; aspect-ratio: 4 / 3; }
-
 /* Title block, styled after an engineering drawing */
 .title-block { display: grid; grid-template-columns: 1fr 1fr; font-family: var(--mono); font-size: 0.82rem; margin: 0; }
 .title-block div { padding: 8px 12px; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); display: grid; gap: 2px; min-width: 0; }
@@ -105,7 +95,6 @@ ul { margin: 0; padding: 0; }
 .title-block div:nth-last-child(-n+2) { border-bottom: 0; }
 .title-block dt { font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 .title-block dd { margin: 0; font-weight: 500; overflow-wrap: anywhere; }
-
 /* ---------- Sections ---------- */
 section { scroll-margin-top: 72px; }
 .section { padding-block: 80px; }
@@ -114,7 +103,6 @@ section { scroll-margin-top: 72px; }
 .section-head.tight { margin-bottom: 0; }
 .section-head h2 { font-size: var(--step-3); font-weight: 750; font-stretch: 110%; }
 .section-head p { color: var(--muted); }
-
 /* ---------- Photo placeholder ---------- */
 .photo {
   position: relative; width: 100%; max-width: 100%; aspect-ratio: 16 / 10;
@@ -130,7 +118,6 @@ section { scroll-margin-top: 72px; }
 .photo svg { width: 34px; height: 34px; color: var(--sky-strong); }
 .photo.square { aspect-ratio: 1 / 1; }
 .photo.tall { aspect-ratio: 4 / 5; }
-
 /* ---------- About ---------- */
 .about { display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; align-items: start; }
 .about-text { display: grid; gap: 16px; max-width: 38rem; min-width: 0; }
@@ -139,7 +126,6 @@ section { scroll-margin-top: 72px; }
 .facts div { background: var(--bg); padding: 16px; display: grid; gap: 4px; }
 .facts strong { font-family: var(--display); font-size: var(--step-2); font-weight: 750; font-variant-numeric: tabular-nums; }
 .facts span { font-size: 0.82rem; color: var(--muted); }
-
 /* ---------- Goals ---------- */
 .goals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .goal { background: var(--bg); border: 1px solid var(--line); border-top: 4px solid var(--sky-strong); padding: 24px; display: grid; gap: 10px; align-content: start; }
@@ -148,7 +134,6 @@ section { scroll-margin-top: 72px; }
 .goal ul { list-style: none; display: grid; gap: 8px; }
 .goal li { padding-left: 18px; position: relative; }
 .goal li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 8px; height: 8px; border: 1.5px solid var(--sky-strong); border-radius: 50%; }
-
 /* ---------- Projects ---------- */
 .projects { display: grid; gap: 72px; }
 .project { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
@@ -169,7 +154,6 @@ section { scroll-margin-top: 72px; }
 .metric { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; display: grid; gap: 2px; min-width: 0; flex: 1 1 140px; }
 .metric strong { font-family: var(--display); font-size: 1.35rem; font-weight: 750; font-variant-numeric: tabular-nums; line-height: 1.15; }
 .metric span { font-size: 0.82rem; color: var(--muted); line-height: 1.35; }
-
 /* ---------- Experience ---------- */
 .timeline { list-style: none; display: grid; border-left: 2px solid var(--sky-strong); margin: 0 0 0 6px; padding: 0; }
 .job { position: relative; padding: 0 0 40px 32px; display: grid; grid-template-columns: 1fr 220px; gap: 12px 32px; }
@@ -182,7 +166,6 @@ section { scroll-margin-top: 72px; }
 .job-side { display: grid; gap: 10px; align-content: start; }
 .job-side .dates { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
 .job-side .photo { aspect-ratio: 4 / 3; }
-
 /* ---------- Skills ---------- */
 .skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .skill-group { display: grid; gap: 14px; align-content: start; padding: 24px; background: var(--bg); border: 1px solid var(--line); }
@@ -190,7 +173,6 @@ section { scroll-margin-top: 72px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
 .chips li { font-size: 0.88rem; padding: 5px 12px; border: 1px solid var(--ink); border-radius: 6px; }
 .chips li.cert { background: var(--sky); border-color: var(--sky); font-weight: 600; }
-
 /* ---------- Contact ---------- */
 .contact { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: start; }
 .contact-list { list-style: none; display: grid; border-top: 1px solid var(--line); }
@@ -199,10 +181,8 @@ section { scroll-margin-top: 72px; }
 .contact-list .v { min-width: 0; overflow-wrap: anywhere; }
 .copy { font: 500 0.8rem var(--body); padding: 6px 12px; border: 1px solid var(--ink); background: transparent; color: var(--ink); border-radius: 6px; cursor: pointer; }
 .copy:hover { background: var(--bg); }
-
 footer { border-top: 1px solid var(--line); }
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-block: 28px; font-size: 0.85rem; color: var(--muted); }
-
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .hero .wrap, .about, .contact { grid-template-columns: 1fr; gap: 36px; }
@@ -224,9 +204,6 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 }
 </style>
 <style>html,body{margin:0}img{max-width:100%}</style>
-</head>
-<body>
-
 <!--
   HOW TO EDIT THIS TEMPLATE
   - Text: change any text directly. Sections are marked with "SECTION:" comments.
@@ -235,9 +212,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   - Add a project: copy one <article class="project"> block and edit it.
   - Colors and fonts: change the variables at the top of the <style> block.
 -->
-
 <a class="skip" target="_self" href="#main" target="_self">Skip to content</a>
-
 <!-- SECTION: Header / navigation -->
 <header class="site-header">
   <div class="wrap">
@@ -251,9 +226,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     </nav>
   </div>
 </header>
-
 <main id="main">
-
 <!-- SECTION: Hero -->
 <section class="hero" id="top" aria-labelledby="hero-title">
   <div class="wrap">
@@ -266,7 +239,6 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <a class="btn secondary" target="_self" href="#contact">Get in touch</a>
       </div>
     </div>
-
     <div class="hero-card">
       <figure class="photo">
         <!-- Replace this figcaption with: <img src="headshot.jpg" alt="Headshot of Leo Zheng"> -->
@@ -286,7 +258,6 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     </div>
   </div>
 </section>
-
 <!-- SECTION: About -->
 <section class="section" id="about" aria-labelledby="about-title">
   <div class="wrap about">
@@ -312,7 +283,6 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     </div>
   </div>
 </section>
-
 <!-- SECTION: Goals (edit these to match your plans) -->
 <section class="section alt" id="goals" aria-labelledby="goals-title">
   <div class="wrap">
@@ -352,7 +322,6 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     </div>
   </div>
 </section>
-
 <!-- SECTION: Projects. Each project: Goal / Tasks / Impact + photo slots -->
 <section class="section" id="projects" aria-labelledby="projects-title">
   <div class="wrap">
@@ -361,9 +330,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <h2 id="projects-title">Selected work</h2>
       <p>Each project lists the goal, what I did, and the measured result.</p>
     </div>
-
     <div class="projects">
-
       <!-- PROJECT 1 -->
       <article class="project">
         <div class="project-media">
@@ -398,7 +365,6 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           </dl>
         </div>
       </article>
-
       <!-- PROJECT 2 -->
       <article class="project">
         <div class="project-media">
@@ -433,7 +399,6 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           </dl>
         </div>
       </article>
-
       <!-- PROJECT 3 -->
       <article class="project">
         <div class="project-media">
@@ -467,7 +432,6 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           </dl>
         </div>
       </article>
-
       <!-- PROJECT 4 -->
       <article class="project">
         <div class="project-media">
@@ -501,11 +465,9 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           </dl>
         </div>
       </article>
-
     </div>
   </div>
 </section>
-
 <!-- SECTION: Experience -->
 <section class="section alt" id="experience" aria-labelledby="exp-title">
   <div class="wrap">
@@ -557,7 +519,6 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     </ol>
   </div>
 </section>
-
 <!-- SECTION: Skills -->
 <section class="section" id="skills" aria-labelledby="skills-title">
   <div class="wrap">
@@ -587,7 +548,6 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     </div>
   </div>
 </section>
-
 <!-- SECTION: Contact -->
 <section class="section alt" id="contact" aria-labelledby="contact-title">
   <div class="wrap contact">
@@ -615,16 +575,13 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     </ul>
   </div>
 </section>
-
 </main>
-
 <footer>
   <div class="wrap">
     <span>© 2026 Leo Zheng</span>
     <span>Last updated November 2026</span>
   </div>
 </footer>
-
 <script>
 document.querySelectorAll('.copy').forEach(function (btn) {
   btn.addEventListener('click', function () {
@@ -642,6 +599,4 @@ document.querySelectorAll('.copy').forEach(function (btn) {
   });
 });
 </script>
-
-</body>
-</html>
+</div>

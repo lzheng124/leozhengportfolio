@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leo Zheng | Projects</title>
+<meta name="description" content="Portfolio of Leo Zheng, mechanical engineering student at Washington University in St. Louis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<!-- Navigation: to add a page, add a link here on every page -->
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="goals.html">Goals</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<!-- SECTION: Projects. Each project: Goal / Tasks / Impact + photo slots -->
+<section class="page-top section" id="projects" aria-labelledby="projects-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Projects</p>
+      <h2 id="projects-title">Selected work</h2>
+      <p>Each project lists the goal, what I did, and the measured result.</p>
+    </div>
+
+    <div class="projects">
+
+      <!-- PROJECT 1 -->
+      <article class="project">
+        <div class="project-media">
+          <figure class="photo">
+            <figcaption>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg>
+              Main photo: rover with custom wheels
+            </figcaption>
+          </figure>
+          <div class="thumbs">
+            <figure class="photo square"><figcaption>CAD: multipart wheel assembly</figcaption></figure>
+            <figure class="photo square"><figcaption>FEA: tire displacement plot</figcaption></figure>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="meta"><span>WashU Robotics · University Rover Challenge</span><span>Sep 2025 – Present</span></div>
+          <h3>Rover Wheel &amp; Shock-Absorbing Tire</h3>
+          <ul class="tags"><li>SolidWorks</li><li>FEA</li><li>3D printing</li><li>Machining</li></ul>
+          <dl class="gti">
+            <div><dt>Goal</dt><dd>Give the six-wheeled rocker-bogie rover more grip on steep, rough terrain and absorb impacts through the tire itself.</dd></div>
+            <div><dt>Tasks</dt><dd><ul>
+              <li>Designed and 3D printed a multipart wheel that assembles around an ODrive motor</li>
+              <li>Ran FEA on relief-hole patterns in an aperture tire and tuned the geometry so it only starts compressing under 20 lb</li>
+              <li>Drafted SolidWorks drawings for rocker-bogie chassis parts and machined them to spec</li>
+            </ul></dd></div>
+            <div><dt>Impact</dt><dd>
+              <div class="impact">
+                <div class="metric"><strong>~20°</strong><span>steeper terrain the rover can climb</span></div>
+                <div class="metric"><strong>20 lb</strong><span>designed compression threshold</span></div>
+              </div>
+            </dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <!-- PROJECT 2 -->
+      <article class="project">
+        <div class="project-media">
+          <figure class="photo">
+            <figcaption>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg>
+              Main photo: watercraft on the water
+            </figcaption>
+          </figure>
+          <div class="thumbs">
+            <figure class="photo square"><figcaption>Intake &amp; collection system</figcaption></figure>
+            <figure class="photo square"><figcaption>Electronics: Raspberry Pi + L298N</figcaption></figure>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="meta"><span>PLTW Engineering Design · Kansas City, MO</span><span>Aug 2024 – May 2025</span></div>
+          <h3>Remote-Controlled Water Surface Cleanup Device</h3>
+          <ul class="tags"><li>Product design</li><li>Raspberry Pi</li><li>3D printing</li><li>Motor control</li></ul>
+          <dl class="gti">
+            <div><dt>Goal</dt><dd>Build a remotely operated boat that collects floating trash from ponds and lakes.</dd></div>
+            <div><dt>Tasks</dt><dd><ul>
+              <li>Designed the hull, intake, and collection system with custom 3D-printed parts</li>
+              <li>Wired and programmed the drive with a Raspberry Pi and an L298N motor controller</li>
+              <li>Built, tested, and iterated the full watercraft</li>
+            </ul></dd></div>
+            <div><dt>Impact</dt><dd>
+              <div class="impact">
+                <div class="metric"><strong>~5 lb</strong><span>of surface trash collected per trip</span></div>
+                <div class="metric"><strong>Top 10</strong><span>of 78 projects, PLTW 2025 competition</span></div>
+              </div>
+            </dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <!-- PROJECT 3 -->
+      <article class="project">
+        <div class="project-media">
+          <figure class="photo">
+            <figcaption>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg>
+              Main photo: robot on the competition field
+            </figcaption>
+          </figure>
+          <div class="thumbs">
+            <figure class="photo square"><figcaption>Double reverse 4-bar lift</figcaption></figure>
+            <figure class="photo square"><figcaption>Team at MOKC Championship</figcaption></figure>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="meta"><span>Belton Robotics · FIRST Tech Challenge</span><span>Aug 2024 – May 2025</span></div>
+          <h3>FTC Robot: Autonomous &amp; Maintenance</h3>
+          <ul class="tags"><li>Programming</li><li>Mecanum drive</li><li>Troubleshooting</li><li>Leadership</li></ul>
+          <dl class="gti">
+            <div><dt>Goal</dt><dd>As Auto Programming &amp; Maintenance Lead, score as many autonomous points as possible and keep the robot running through every match.</dd></div>
+            <div><dt>Tasks</dt><dd><ul>
+              <li>Programmed the autonomous routine for a mecanum-wheeled robot with a double reverse 4-bar lift</li>
+              <li>Inspected and repaired mechanical and electrical components between matches</li>
+            </ul></dd></div>
+            <div><dt>Impact</dt><dd>
+              <div class="impact">
+                <div class="metric"><strong>#1</strong><span>average auto points in MO/KS for half the season</span></div>
+                <div class="metric"><strong>4th</strong><span>place, FTC MOKC Championship (semi-finals)</span></div>
+              </div>
+            </dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <!-- PROJECT 4 -->
+      <article class="project">
+        <div class="project-media">
+          <figure class="photo">
+            <figcaption>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 19V5M4 19h16"/><path d="M7 15l4-4 3 3 5-6"/></svg>
+              Screenshot: map of transmission over time
+            </figcaption>
+          </figure>
+          <div class="thumbs">
+            <figure class="photo square"><figcaption>Trend chart with policy events</figcaption></figure>
+            <figure class="photo square"><figcaption>Code excerpt</figcaption></figure>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="meta"><span>Software project · St. Louis, MO</span><span>Jan 2026 – May 2026</span></div>
+          <h3>COVID-19 Infection Simulator</h3>
+          <ul class="tags"><li>Python</li><li>Data analysis</li><li>Visualization</li></ul>
+          <dl class="gti">
+            <div><dt>Goal</dt><dd>Show how COVID-19 spread geographically over time and how public health measures lined up with changes in transmission.</dd></div>
+            <div><dt>Tasks</dt><dd><ul>
+              <li>Wrote a Python program that pulls data from official COVID-19 databases</li>
+              <li>Mapped transmission progression for any selected time period</li>
+              <li>Plotted trend lines marked with major events such as mask mandates</li>
+            </ul></dd></div>
+            <div><dt>Impact</dt><dd>
+              <div class="impact">
+                <div class="metric"><strong>Policy view</strong><span>supports analysis of how well health policies worked</span></div>
+              </div>
+            </dd></div>
+          </dl>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Leo Zheng</span>
+    <span>Last updated November 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>

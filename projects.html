@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects | Leo Zheng</title>
+<meta name="description" content="Portfolio of Leo Zheng, mechanical engineering student at Washington University in St. Louis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+  HOW TO EDIT THIS TEMPLATE
+  - Text: change any text directly. Sections are marked with "SECTION:" comments.
+  - Photos: each photo slot is a <figure class="photo">. To add a real photo, replace the
+    <figcaption>...</figcaption> inside it with:  <img src="your-photo.jpg" alt="Describe the photo">
+  - Add a project: copy one <article class="project"> block and edit it.
+  - Colors and fonts: change the variables at the top of style.css (shared by all pages).
+  - Pages: index.html (About + Contact), projects.html, experience.html (Experience + Skills).
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Navigation: same on every page -->
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a href="./">About Me</a>
+      <a href="projects" aria-current="page">Projects</a>
+      <a href="experience">Experience</a>
+      <a href="./#contact">Contact</a>
+      <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- SECTION: Projects. Each project: Goal / Tasks / Impact + photo slots -->
+<section class="page-top section" id="projects" aria-labelledby="projects-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="projects-title">Projects</h2>
+      <p>Here are some of the engineering projects I have worked on, from robotics hardware to software.</p>
+    </div>
+
+    <div class="projects">
+
+      <!-- PROJECT 1: wheel case study (overview first, then design details) -->
+      <article class="project case">
+        <header class="case-head">
+          <div class="meta"><span>WashU Robotics · University Rover Challenge 2027</span><span>Sep 2025 – Present</span></div>
+          <h3>Shock-Absorbing Rover Wheel for an ODrive Hub Motor</h3>
+          <p class="case-lede">A 3D-printed tire and two-piece rim that turn an off-the-shelf hub motor into an off-road wheel for a six-wheeled rover.</p>
+          <ul class="tags"><li>SolidWorks</li><li>FEA</li><li>Tolerancing</li><li>3D printing</li></ul>
+        </header>
+
+        <div class="case-overview">
+          <div class="case-text">
+            <p class="step-label">Overview</p>
+              <h4>Goals</h4>
+            <ul class="case-list">
+              <li>Grip loose soil and steep slopes on URC's Utah desert course</li>
+              <li>Absorb shock by flexing under loads above the rover's resting weight (about 20 lb per wheel)</li>
+              <li>Mount to the ODrive hub motor without modifying it, so the motor stays sealed from dust</li>
+              <li>Build every part in-house with 3D printing and heat-set inserts</li>
+            </ul>
+            <h4>Outcomes</h4>
+            <ul class="case-list">
+              <li>Two-piece rim clamps onto the hub with a 0.1 mm transition fit, with no changes to the motor</li>
+              <li>Tire bolts to the rim through heat-set threaded inserts and slides on with a 0.3 mm clearance fit</li>
+              <li>Relief slots raised peak deflection 46% over a solid tire at 20 lb (0.063 → 0.092 mm in FEA)</li>
+              <li>Finished wheels let the rover climb slopes about 20° steeper</li>
+            </ul>
+            <div class="impact case-metrics">
+            <div class="metric"><strong>+46%</strong><span>more deflection than a solid tire at 20 lb</span></div>
+            <div class="metric"><strong>~20°</strong><span>steeper terrain the rover can climb</span></div>
+            <div class="metric"><strong>+48%</strong><span>larger wheel diameter (171 → 253 mm)</span></div>
+          </div>
+          </div>
+          <figure class="fig">
+            <div class="photo"><img src="wheel-finished.jpg" alt="Finished wheel: slotted black tire on the orange rim, mounted on the ODrive hub motor" loading="lazy"></div>
+            <figcaption><strong>Finished Wheel</strong> – Ø253 mm slotted tire bolted to the two-piece rim, which clamps onto the ODrive BotWheel hub motor with no modifications to the motor housing.</figcaption>
+          </figure>
+        </div>
+
+        <div class="case-steps">
+
+          <!-- Two topics side by side: text on top, photo below -->
+          <div class="case-pair">
+            <section class="case-col">
+              <p class="step-label">Problem</p>
+              <h4>ODrive: Low Traction and No Shock Absorption</h4>
+              <p>I chose the ODrive BotWheel because the motor sits inside the wheel hub, which keeps the drivetrain simple and its internals protected from dust. Its stock tire is thin, hard rubber with little grip and no cushioning, while URC runs on Utah desert terrain with loose soil, steep slopes, and vertical faces under a 50 kg (≈110 lb) rover mass limit.</p>
+              <figure class="fig">
+                <div class="photo fit"><img src="odrive-botwheel.jpg" alt="ODrive BotWheel hub motor with its stock solid rubber tire, wired to an ODrive S1 motor controller" loading="lazy"></div>
+                <figcaption><strong>Stock ODrive BotWheel</strong> – Brushless hub motor with its Ø171 mm solid rubber tire, wired to an ODrive S1 controller. The thin, hard tread offers little traction or compliance on loose soil. <span class="credit">Image: ODrive Robotics</span></figcaption>
+              </figure>
+            </section>
+            <section class="case-col">
+              <p class="step-label">Concept</p>
+              <h4>Custom Rim Design for Tire-to-Hub Mounting</h4>
+              <p>The hub has no mounting features, so I designed a two-piece rim that clamps around it with a 0.1 mm transition fit. Heat-set threaded inserts in the rim let the tire bolt on, and the tire slides over the rim with a 0.3 mm clearance fit guided by a 45° chamfer.</p>
+              <figure class="fig">
+                <div class="photo fit"><img src="rim-sketch.jpg" alt="Hand-drawn cross-section of the rim between the ODrive motor and tire, labeling heat insert holes, a 45 degree chamfer, a 0.1 mm transition fit, and a 0.3 mm clearance fit" loading="lazy"></div>
+                <figcaption><strong>Rim Half-Section (Concept Sketch)</strong> – The two-piece rim grips the motor housing with a 0.1 mm transition fit and carries heat-set threaded inserts for the tire fasteners. A 0.3 mm clearance fit and 45° lead-in chamfer let the tire slide onto the rim during assembly.</figcaption>
+              </figure>
+            </section>
+          </div>
+
+          <!-- FEA: text + comparison table on the left, plots side by side on the right -->
+          <section class="case-split fea">
+            <div class="case-text">
+              <p class="step-label">Challenges &amp; Iteration</p>
+              <h4>FEA-Driven Relief Slot Design</h4>
+              <p>My first tire was fully solid, and SolidWorks FEA showed it barely deflected under a 20 lb load, roughly what each of the six wheels carries. Adding relief slots let the tread bend around rocks and slopes, raising peak deflection from 0.063 mm to 0.092 mm under the same load.</p>
+              <div class="table-wrap">
+                <table class="spec">
+                  <caption>FEA Comparison, 20 lb Load</caption>
+                  <thead><tr><th scope="col">Design</th><th scope="col">Peak Displacement</th><th scope="col">Change</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">v1 Solid Tire</th><td>0.063 mm</td><td>Baseline</td></tr>
+                    <tr><th scope="row">v2 Slotted Tire</th><td>0.092 mm</td><td>+46%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="case-media two">
+              <figure class="fig">
+                <div class="photo fit"><img src="wheel-fea-solid.png" alt="SolidWorks FEA displacement plot of the solid tire, peak 0.063 mm" loading="lazy"></div>
+                <figcaption><strong>FEA v1: Solid Tire</strong> – SolidWorks static study with a 20 lb load on the top tread and the inner bore fixed. Peak displacement of 0.063 mm, so impacts pass almost directly to the hub.</figcaption>
+              </figure>
+              <figure class="fig">
+                <div class="photo fit"><img src="wheel-fea.png" alt="SolidWorks FEA displacement plot of the slotted tire, peak 0.092 mm" loading="lazy"></div>
+                <figcaption><strong>FEA v2: Slotted Tire</strong> – Same load and fixtures. Relief slots let the tire webs bend, raising peak displacement to 0.092 mm (+46%) and spreading deflection deeper into the tire.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <!-- Build: large photo on the left, text and assembly photo on the right -->
+          <section class="case-split build">
+            <figure class="fig">
+                <!-- Replace this placeholder with: <img src="wheel-assembly.jpg" alt="Describe the assembly photo" loading="lazy"> -->
+                <div class="photo ph-box"><div class="ph">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg>
+                  Assembly photo
+                </div></div>
+                <figcaption><strong>Assembly</strong> – Rim halves clamped around the hub motor, then the tire fastened to the rim through the heat-set inserts.</figcaption>
+              </figure>
+            <div class="case-text">
+              <p class="step-label">Build</p>
+              <h4>Fabrication and Assembly: 3D-Printed Tire and Rim</h4>
+              <p>These are the 3D-printed tire and two-piece rim that make up the wheel. The rim halves clamp around the ODrive hub motor, and the tire bolts onto the rim to complete the assembly.</p>
+              <figure class="fig">
+                <div class="photo"><img src="wheel-parts.jpg" alt="3D-printed slotted tire next to the two orange rim halves" loading="lazy"></div>
+                <figcaption><strong>Printed Components</strong> – Slotted tire (left) and the two rim halves (right), showing the stepped seat that locates the tire and the holes for heat-set inserts.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+        </div>
+      </article>
+
+      <!-- PROJECT 2: water cleanup case study (same structure as the wheel project) -->
+      <article class="project case water">
+        <header class="case-head">
+          <div class="meta"><span>PLTW Engineering Design Competition · Kansas City, MO</span><span>Aug 2024 – May 2025</span></div>
+          <h3>Remote-Controlled Water Surface Cleanup Device</h3>
+          <p class="case-lede">A remote-controlled pontoon boat that drives across a lake, nets floating trash, and brings it back to shore.</p>
+          <ul class="tags"><li>Product Design</li><li>3D Printing</li><li>Raspberry Pi</li><li>Motor Control</li></ul>
+        </header>
+
+        <div class="case-overview">
+          <div class="case-text">
+            <p class="step-label">Overview</p>
+            <h4>Goals</h4>
+            <ul class="case-list">
+              <li>Drive across a lake's surface by remote control and return to shore</li>
+              <li>Collect and hold floating trash in a trailing net</li>
+              <li>Stay afloat while carrying the electronics and collected trash</li>
+              <li>Keep the boat portable, affordable, and low on manual labor</li>
+            </ul>
+            <h4>Outcomes</h4>
+            <ul class="case-list">
+              <li>Collected about 5 lb of floating trash per trip</li>
+              <li>Placed in the top 10 out of 78 projects at the PLTW 2025 Engineering Design Competition</li>
+              <li>Redesigned the pontoon clamps so they grip the PVC tubes</li>
+              <li>Added water-resistant foam to increase buoyancy</li>
+            </ul>
+            <div class="impact case-metrics">
+              <div class="metric"><strong>~5 lb</strong><span>of trash collected per trip</span></div>
+              <div class="metric"><strong>Top 10</strong><span>out of 78 projects</span></div>
+              <div class="metric"><strong>Wireless</strong><span>remote control with an Xbox controller</span></div>
+            </div>
+          </div>
+          <figure class="fig">
+            <div class="photo"><img src="water-drive.gif" alt="Animation of the cleanup boat driving across a pool lane under remote control" loading="lazy"></div>
+            <figcaption><strong>Pool Test</strong> – The boat driving across the pool under remote control.</figcaption>
+          </figure>
+        </div>
+
+        <div class="case-steps">
+
+          <!-- Problem and concept: display board on the left, text stacked on the right -->
+          <section class="case-split build">
+            <figure class="fig">
+                <div class="photo"><img src="water-board.jpg" alt="Save the Seas display board with the cleanup boat, paddle wheels, and foam pontoons on the table in front" loading="lazy"></div>
+                <figcaption><strong>Competition Display</strong> – "Save the Seas" board listing the problem, criteria, constraints, and calculations, with prototypes in front.</figcaption>
+              </figure>
+            <div class="case-text stacked">
+              <div>
+                <p class="step-label">Problem</p>
+                <h4>Trash Buildup on a Local Lake</h4>
+                <p>A cross-country course runs around a local lake, and litter from it collects on the water's surface. Existing lake-cleaning robots are often too large, too expensive, or need too much manual labor.</p>
+              </div>
+              <div>
+                <p class="step-label">Concept</p>
+                <h4>Pontoon Boat with Paddle Wheel Drive</h4>
+                <p>I chose a pontoon layout for stability, with a 3D-printed paddle wheel on each side driven by a DC motor and a net trailing behind the deck to catch trash.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Iterations: clamp photo on the left; clamp text, foam text, and before/after photos on the right -->
+          <section class="case-split clamps">
+            <figure class="fig">
+              <div class="photo"><img src="water-clamps.jpg" alt="Plywood deck with two white PVC pontoons held on by blue 3D-printed clamps" loading="lazy"></div>
+              <figcaption><strong>Redesigned Clamps</strong> – Four 3D-printed clamps bolt the PVC pontoons to the plywood deck.</figcaption>
+            </figure>
+            <div class="case-text stacked">
+              <div>
+                <p class="step-label">Challenges &amp; Iteration</p>
+                <h4>Pontoon Clamp Redesign</h4>
+                <p>The first 3D-printed clamp did not grip the PVC pontoon, so the tube could shift under the deck. I redesigned the clamp so it closes tightly around the tube and holds it firmly to the deck.</p>
+              </div>
+              <div>
+                <h4>Increasing Buoyancy with Foam</h4>
+                <p>The PVC pontoons alone did not keep the deck high enough above the water. Wrapping them in pink water-resistant foam added buoyancy for the electronics and collected trash.</p>
+              </div>
+              <div class="case-media two">
+              <figure class="fig">
+                <div class="photo"><img src="water-frame.jpg" alt="Plywood deck bolted to two white PVC pipe pontoons" loading="lazy"></div>
+                <figcaption><strong>Before</strong> – Plywood deck on bare PVC pontoons.</figcaption>
+              </figure>
+              <figure class="fig">
+                <div class="photo"><img src="water-foam.jpg" alt="Black deck with motor housings and pontoons wrapped in pink foam rings" loading="lazy"></div>
+                <figcaption><strong>After</strong> – Pontoons wrapped in water-resistant foam, with motor housings on the deck.</figcaption>
+              </figure>
+            </div>
+            </div>
+          </section>
+
+          <section class="case-wide">
+            <div class="case-text">
+              <p class="step-label">Build</p>
+              <h4>Electronics and Control</h4>
+              <dl class="spec-list">
+                <div><dt>Controller</dt><dd>Raspberry Pi</dd></div>
+                <div><dt>Remote Control</dt><dd>Xbox controller paired wirelessly to the Raspberry Pi to drive the boat</dd></div>
+                <div><dt>Motor Driver</dt><dd>L298N dual H-bridge</dd></div>
+                <div><dt>Drive</dt><dd>Two DC motors in 3D-printed housings, one per paddle wheel</dd></div>
+                <div><dt>Collection</dt><dd>Mesh net trailing behind the deck</dd></div>
+              </dl>
+            </div>
+          </section>
+
+        </div>
+      </article>
+
+      <!-- PROJECT 3: COVID-19 outbreak simulator (case-study layout) -->
+      <article class="project case covid">
+        <header class="case-head">
+          <div class="meta"><span>Software Project · St. Louis, MO</span><span>Jan 2026 – May 2026</span></div>
+          <h3>COVID-19 Outbreak Simulator for California</h3>
+          <p class="case-lede">A Python program that animates COVID-19 cases as a dot-density map of California's counties and charts statewide cases and deaths against major public health policies.</p>
+          <ul class="tags"><li>Python</li><li>Matplotlib</li><li>Data Analysis</li><li>Visualization</li></ul>
+        </header>
+
+        <div class="case-overview">
+          <div class="case-text">
+            <p class="step-label">Overview</p>
+            <h4>Goals</h4>
+            <ul class="case-list">
+              <li>Show where and how COVID-19 spread across California's counties, not just a single daily total</li>
+              <li>Let the user choose any date range to animate</li>
+              <li>Chart statewide cases and deaths alongside major policy dates</li>
+              <li>Judge whether preventive policies changed the trend</li>
+            </ul>
+            <h4>Outcomes</h4>
+            <ul class="case-list">
+              <li>Parsed a dataset of 85,000+ rows and 12 columns into dictionaries of daily cases and deaths for every county</li>
+              <li>Animated a dot-density map that updates day by day from the start date to the end date</li>
+              <li>Validated date input so out-of-range or mistyped dates prompt the user to try again</li>
+              <li>Plotted statewide cases and deaths with six policy events marked</li>
+            </ul>
+            <div class="impact case-metrics">
+              <div class="metric"><strong>85,000+</strong><span>rows of county data processed</span></div>
+              <div class="metric"><strong>58</strong><span>counties animated on the map</span></div>
+              <div class="metric"><strong>6</strong><span>policy events marked on the trend charts</span></div>
+            </div>
+          </div>
+          <figure class="fig">
+            <div class="photo"><img src="covid-map.gif" alt="Animated dot-density map of California counties with red dots showing daily COVID-19 cases, plus the date, total cases, and total deaths" loading="lazy"></div>
+            <figcaption><strong>Dot-Density Animation</strong> – Each day, red dots are scattered inside each county based on its case count, with daily totals shown beside the map.</figcaption>
+          </figure>
+        </div>
+
+        <div class="case-steps">
+
+          <!-- Problem and approach: two text columns -->
+          <div class="case-duo">
+            <section>
+              <p class="step-label">Problem</p>
+              <h4>An Invisible Crisis Reported as a Single Number</h4>
+              <p>News coverage usually reported COVID-19 as one daily case count, which hid where the virus was spreading and made it hard to judge whether preventive policies worked. California, the most populous US state, makes those effects easiest to see.</p>
+            </section>
+            <section>
+              <p class="step-label">Approach</p>
+              <h4>County Dictionaries and a Dot-Density Map</h4>
+              <p>The program reads every county's daily cases and deaths into dictionaries keyed by county name, asks for a start and end date in YYYY-MM-DD format, then plots red dots at random points inside each county based on that day's cases and steps through each date.</p>
+            </section>
+          </div>
+
+          <!-- Results: text on top, both charts side by side -->
+          <section class="case-wide">
+            <div class="case-text">
+              <p class="step-label">Results</p>
+              <h4>Statewide Cases and Deaths Against Policy Dates</h4>
+              <p>Line graphs of total cases and deaths from February 2020 to December 2023 mark each major policy, from the stay-at-home order to the end of the state of emergency, so the trend before and after each one can be compared.</p>
+            </div>
+            <div class="case-media two">
+              <figure class="fig">
+                <div class="photo"><img src="covid-cases.png" alt="Line graph of daily COVID-19 cases in California from 2020 to 2023 with six policy dates marked by dashed green lines" loading="lazy"></div>
+                <figcaption><strong>Total Cases, 2020–2023</strong> – Daily cases peaked near 157,000 in January 2022.</figcaption>
+              </figure>
+              <figure class="fig">
+                <div class="photo"><img src="covid-deaths.png" alt="Line graph of daily COVID-19 deaths in California from 2020 to 2023 with six policy dates marked by dashed green lines" loading="lazy"></div>
+                <figcaption><strong>Total Deaths, 2020–2023</strong> – Daily deaths peaked above 700 in January 2021.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <!-- Challenges: two text columns -->
+          <div class="case-duo">
+            <section>
+              <p class="step-label">Challenges &amp; Solutions</p>
+              <h4>Animating the Map</h4>
+              <p>The first version only plotted a single day. Using the approach from an in-class projectile animation, a while loop draws the map, pauses, clears it, and redraws it for the next date until it reaches the end date.</p>
+            </section>
+            <section>
+              <p class="step-label">&nbsp;</p>
+              <h4>Readable Date Axes</h4>
+              <p>Years of daily dates crowded the x-axis. Matplotlib's <code>mdates.DateFormatter</code> shortened the labels to month and year, and rotating them 45° kept long ranges like 2020-02-01 to 2023-12-19 legible.</p>
+            </section>
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Leo Zheng</span>
+    <span>Last updated November 2026</span>
+  </div>
+</footer>
+
+<script>
+/* When a page is opened straight from your computer (file://), point links at the .html files.
+   Online (GitHub Pages) the clean addresses like /projects are kept. */
+if (location.protocol === 'file:') {
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    var h = a.getAttribute('href');
+    if (h === './') a.setAttribute('href', 'index.html');
+    else if (h.indexOf('./#') === 0) a.setAttribute('href', 'index.html' + h.slice(2));
+    else if (/^[a-z-]+$/.test(h)) a.setAttribute('href', h + '.html');
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experience | Leo Zheng</title>
+<meta name="description" content="Portfolio of Leo Zheng, mechanical engineering student at Washington University in St. Louis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+  HOW TO EDIT THIS TEMPLATE
+  - Text: change any text directly. Sections are marked with "SECTION:" comments.
+  - Photos: each photo slot is a <figure class="photo">. To add a real photo, replace the
+    <figcaption>...</figcaption> inside it with:  <img src="your-photo.jpg" alt="Describe the photo">
+  - Add a project: copy one <article class="project"> block and edit it.
+  - Colors and fonts: change the variables at the top of style.css (shared by all pages).
+  - Pages: index.html (About + Contact), projects.html, experience.html (Experience + Skills).
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Navigation: same on every page -->
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a href="./">About Me</a>
+      <a href="projects">Projects</a>
+      <a href="experience" aria-current="page">Experience</a>
+      <a href="./#contact">Contact</a>
+      <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- SECTION: Experience -->
+<section class="page-top section alt" id="experience" aria-labelledby="exp-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="exp-title">Experience</h2>
+    </div>
+    <ol class="timeline">
+      <li class="job">
+        <div class="job-main">
+          <h3>Machine Shop Teaching Assistant</h3>
+          <p class="org">Washington University in St. Louis · St. Louis, MO</p>
+          <ul>
+            <li>Teach students to run the TRAK knee mill, vertical and horizontal bandsaws, and Clausing lathe, with a 100% pass rate</li>
+            <li>Guide students through 6 machining projects, including ProtoTRAK CNC programming, with 0 injuries</li>
+          </ul>
+        </div>
+        <div class="job-side">
+          <p class="dates">Jan 2026 – Present</p>
+          <figure class="photo"><img src="machine-shop.jpg" alt="TRAK knee mills with ProtoTRAK controls in the Washington University machine shop" loading="lazy"></figure>
+        </div>
+      </li>
+      <li class="job">
+        <div class="job-main">
+          <h3>Manual Machine Operator</h3>
+          <p class="org">Venture Industrial Products · Lee's Summit, MO</p>
+          <ul>
+            <li>Processed and inspected 300+ custom metal parts a day on knee mills, flat finishers, and turret punch presses, raising production by about 15%</li>
+            <li>Read engineering drawings and checked parts with calipers, gauges, and optical comparators to hold ±0.005 in tolerances</li>
+          </ul>
+        </div>
+        <div class="job-side">
+          <p class="dates">May 2026 – Aug 2026</p>
+          <figure class="photo logo"><img src="venture-logo.png" alt="Venture Industrial Products, Inc. logo" loading="lazy"></figure>
+        </div>
+      </li>
+      <li class="job">
+        <div class="job-main">
+          <h3>Digital Literacy Mentor (Volunteer)</h3>
+          <p class="org">Welcome Wellness, Tech Tutor · Belton, MO</p>
+          <ul>
+            <li>Tutored 4 senior citizens one-on-one and in groups on smartphones and computers, so they could use online banking and healthcare services on their own</li>
+          </ul>
+        </div>
+        <div class="job-side">
+          <p class="dates">Mar 2025 – May 2025</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Leo Zheng</span>
+    <span>Last updated November 2026</span>
+  </div>
+</footer>
+
+<script>
+/* When a page is opened straight from your computer (file://), point links at the .html files.
+   Online (GitHub Pages) the clean addresses like /projects are kept. */
+if (location.protocol === 'file:') {
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    var h = a.getAttribute('href');
+    if (h === './') a.setAttribute('href', 'index.html');
+    else if (h.indexOf('./#') === 0) a.setAttribute('href', 'index.html' + h.slice(2));
+    else if (/^[a-z-]+$/.test(h)) a.setAttribute('href', h + '.html');
+  });
+}
+</script>
+</body>
+</html>

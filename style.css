@@ -412,3 +412,4 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 /* Project titles and intros use the full width */
 .case-head { max-width: none; }
 .case-head h3 { text-wrap: wrap; }
+.project.case:not(.water):not(.covid) .case-split.build { align-items: center; }
